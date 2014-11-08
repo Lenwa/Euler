@@ -1,0 +1,19 @@
+_author__ = 'Kyle'
+
+inter_fib = [1, 2]
+even_list = []
+
+def fib(n):
+    n += inter_fib[-1]
+    if n % 2 == 0:
+        inter_fib.extend([n])
+        even_list.extend([n])
+        fib(n)
+    elif n >= 4000000:
+        return
+    else:
+        inter_fib.extend([n])
+        fib(n)
+fib(3)
+answer = sum(even_list)
+print answer_
